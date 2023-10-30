@@ -1,4 +1,3 @@
-using System;
 using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MultiThreading.Task3.MatrixMultiplier.Matrices;
@@ -11,7 +10,7 @@ namespace MultiThreading.Task3.MatrixMultiplier.Tests
  *    Find out the size which makes parallel multiplication more effective than the regular one.
      *
      * Result: There are currently two tests that use two equal matrix, and before I used equal size random padding,
-     * in both scenarios the parallel loop started working better with ~55, but sometimes the result may differ depending on usage system resource,
+     * in both scenarios the parallel loop started working better with ~50, but sometimes the result may differ depending on usage system resource,
      * as I see, the parallel loop starts to execute better at 99% after capturing the 70-80 matrix size.
  */
 
@@ -36,50 +35,53 @@ namespace MultiThreading.Task3.MatrixMultiplier.Tests
         }
 
         [TestMethod]
-        public void ParallelLoopFor_EfficiencyTest()
+        public void CompareMatricesMultiplierConstructorsPerformance()
         {
-            int matrixSize = 75;
-            int matrixValue = 15;
+            var regularMultiplierTime = MeasureMatrixMultiplier(TestMatrix3On3, _regularMultiplier);
+            var parallelMultiplierTime = MeasureMatrixMultiplier(TestMatrix3On3, _parallelMultiplier);
 
-            // if we populate the tests with random values, the test result will be different all the time,
-            // but a roughly parallel loop works better starting at ~55 if we use random values
-            IMatrix matrixA = FillMatrixWithStaticValues(matrixSize, matrixSize, matrixValue);
-            IMatrix matrixB = FillMatrixWithStaticValues(matrixSize, matrixSize, matrixValue);
+            Console.WriteLine("Regular MatricesMultiplier Constructor Time: " + regularMultiplierTime + " ticks");
+            Console.WriteLine("Parallel MatricesMultiplier Constructor Time: " + parallelMultiplierTime + " ticks");
 
-            var regularTicks = MeasureMatrixMultiplicationTime(_regularMultiplier, matrixA, matrixB);
-            var parallelTicks = MeasureMatrixMultiplicationTime(_parallelMultiplier, matrixA, matrixB);
-
-            Console.WriteLine($"Matrix Size: {matrixSize}x{matrixSize}");
-            Console.WriteLine($"Regular Multiplication Time: {regularTicks} ticks");
-            Console.WriteLine($"Parallel Multiplication Time: {parallelTicks} ticks");
-
-            Assert.IsTrue(regularTicks > parallelTicks);
+            // Compare the execution times and check if the regular loop is faster
+            Assert.IsTrue(regularMultiplierTime < parallelMultiplierTime);
         }
 
         [TestMethod]
-        public void RegularLoopFor_EfficiencyTest()
+        public void ParallelLoopFor_EfficiencyTest()
         {
-            // todo: implement a test method to check the size of the matrix which makes parallel multiplication more effective than
-
-            int matrixSize = 50;
+            int matrixSize = 10;
             int matrixValue = 15;
 
-            IMatrix matrixA = FillMatrixWithStaticValues(matrixSize, matrixSize, matrixValue);
-            IMatrix matrixB = FillMatrixWithStaticValues(matrixSize, matrixSize, matrixValue);
+            while (true)
+            {
+                IMatrix matrixA = FillMatrixWithStaticValues(matrixSize, matrixSize, matrixValue);
+                IMatrix matrixB = FillMatrixWithStaticValues(matrixSize, matrixSize, matrixValue);
 
-            var regularTicks = MeasureMatrixMultiplicationTime(_regularMultiplier, matrixA, matrixB);
-            var parallelTicks = MeasureMatrixMultiplicationTime(_parallelMultiplier, matrixA, matrixB);
+                var regularTicks = MeasureMatrixMultiplicationTime(_regularMultiplier, matrixA, matrixB);
+                var parallelTicks = MeasureMatrixMultiplicationTime(_parallelMultiplier, matrixA, matrixB);
 
-            Console.WriteLine($"Matrix Size: {matrixSize}x{matrixSize}");
-            Console.WriteLine($"Regular Multiplication Time: {regularTicks} ticks");
-            Console.WriteLine($"Parallel Multiplication Time: {parallelTicks} ticks");
+                Console.WriteLine($"Matrix Size: {matrixSize}x{matrixSize}");
+                Console.WriteLine($"Regular Multiplication Time: {regularTicks} ticks");
+                Console.WriteLine($"Parallel Multiplication Time: {parallelTicks} ticks");
 
-            Assert.IsTrue(regularTicks < parallelTicks);
+                if (regularTicks >= parallelTicks)
+                    break;
 
+                matrixSize += 10;
+            }
         }
 
-
         #region private methods
+
+        private long MeasureMatrixMultiplier(Action<IMatricesMultiplier> action, IMatricesMultiplier multiplier)
+        {
+            var stopwatch = Stopwatch.StartNew();
+            action(multiplier);
+            stopwatch.Stop();
+
+            return stopwatch.ElapsedTicks;
+        }
 
         public static IMatrix FillMatrixWithStaticValues(int numRows, int numCols, long staticValue)
         {
