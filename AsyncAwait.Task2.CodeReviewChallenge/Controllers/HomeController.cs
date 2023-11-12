@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using AsyncAwait.Task2.CodeReviewChallenge.Models;
-using AsyncAwait.Task2.CodeReviewChallenge.Models.Support;
-using AsyncAwait.Task2.CodeReviewChallenge.Services;
 using Microsoft.AspNetCore.Mvc;
+using Task2.CodeReviewChallenge.Models;
+using Task2.CodeReviewChallenge.Models.Support;
+using Task2.CodeReviewChallenge.Services;
 
-namespace AsyncAwait.Task2.CodeReviewChallenge.Controllers;
+namespace Task2.CodeReviewChallenge.Controllers;
 
 public class HomeController : Controller
 {

@@ -1,15 +1,15 @@
-﻿using AsyncAwait.Task2.CodeReviewChallenge.Extensions;
-using AsyncAwait.Task2.CodeReviewChallenge.Models.Support;
-using AsyncAwait.Task2.CodeReviewChallenge.Services;
-using CloudServices;
+﻿using CloudServices;
 using CloudServices.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Task2.CodeReviewChallenge.Extensions;
+using Task2.CodeReviewChallenge.Models.Support;
+using Task2.CodeReviewChallenge.Services;
 
-namespace AsyncAwait.Task2.CodeReviewChallenge;
+namespace Task2.CodeReviewChallenge;
 public class Startup
 {
     public Startup(IConfiguration configuration)

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CloudServices.Interfaces;
 
-namespace AsyncAwait.Task2.CodeReviewChallenge.Models.Support;
+namespace Task2.CodeReviewChallenge.Models.Support;
 
 public class ManualAssistant : IAssistant
 {

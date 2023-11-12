@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace AsyncAwait.Task2.CodeReviewChallenge;
+namespace Task2.CodeReviewChallenge;
 
 public class Program
 {

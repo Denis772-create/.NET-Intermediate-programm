@@ -1,4 +1,4 @@
-﻿namespace AsyncAwait.Task2.CodeReviewChallenge.Headers;
+﻿namespace Task2.CodeReviewChallenge.Headers;
 
 public class CustomHttpHeaders
 {

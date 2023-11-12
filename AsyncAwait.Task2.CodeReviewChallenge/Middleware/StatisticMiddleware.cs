@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using AsyncAwait.Task2.CodeReviewChallenge.Headers;
 using CloudServices.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Task2.CodeReviewChallenge.Headers;
 
-namespace AsyncAwait.Task2.CodeReviewChallenge.Middleware;
+namespace Task2.CodeReviewChallenge.Middleware;
 
 public class StatisticMiddleware
 {
