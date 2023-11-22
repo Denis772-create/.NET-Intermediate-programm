@@ -27,6 +27,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2.CodeReviewChallenge",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudServices", "CloudServices\CloudServices.csproj", "{0958EAC7-74DB-406B-BB35-6D5F744A55EC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message queues", "Message queues", "{75A3DFC9-0218-4C39-8E0C-4D8A8FF98EFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCapture.Service", "Message queues\DataCapture.Service\DataCapture.Service.csproj", "{DF5F1768-5501-4A6F-B8FF-A502FB654767}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Processing.Service", "Message queues\Processing.Service\Processing.Service.csproj", "{42AF8F4C-59B0-4E59-9324-97679C28F89B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +79,14 @@ Global
 		{0958EAC7-74DB-406B-BB35-6D5F744A55EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0958EAC7-74DB-406B-BB35-6D5F744A55EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0958EAC7-74DB-406B-BB35-6D5F744A55EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5F1768-5501-4A6F-B8FF-A502FB654767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5F1768-5501-4A6F-B8FF-A502FB654767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5F1768-5501-4A6F-B8FF-A502FB654767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5F1768-5501-4A6F-B8FF-A502FB654767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42AF8F4C-59B0-4E59-9324-97679C28F89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42AF8F4C-59B0-4E59-9324-97679C28F89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42AF8F4C-59B0-4E59-9324-97679C28F89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42AF8F4C-59B0-4E59-9324-97679C28F89B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
