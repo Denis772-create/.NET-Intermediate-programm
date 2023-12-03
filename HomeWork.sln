@@ -29,9 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloudServices", "CloudServi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message queues", "Message queues", "{75A3DFC9-0218-4C39-8E0C-4D8A8FF98EFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCapture.Service", "Message queues\DataCapture.Service\DataCapture.Service.csproj", "{DF5F1768-5501-4A6F-B8FF-A502FB654767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCapture.Service", "Message queues\DataCapture.Service\DataCapture.Service.csproj", "{DF5F1768-5501-4A6F-B8FF-A502FB654767}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Processing.Service", "Message queues\Processing.Service\Processing.Service.csproj", "{42AF8F4C-59B0-4E59-9324-97679C28F89B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Processing.Service", "Message queues\Processing.Service\Processing.Service.csproj", "{42AF8F4C-59B0-4E59-9324-97679C28F89B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +102,8 @@ Global
 		{97063D97-2831-4392-AF9F-E47A28948223} = {51AF36D0-D9F7-4CB9-ACEB-8A9BAA9B7FCE}
 		{9568E06D-B2DD-460B-A799-9791ADF9C9EB} = {51AF36D0-D9F7-4CB9-ACEB-8A9BAA9B7FCE}
 		{0958EAC7-74DB-406B-BB35-6D5F744A55EC} = {51AF36D0-D9F7-4CB9-ACEB-8A9BAA9B7FCE}
+		{DF5F1768-5501-4A6F-B8FF-A502FB654767} = {75A3DFC9-0218-4C39-8E0C-4D8A8FF98EFD}
+		{42AF8F4C-59B0-4E59-9324-97679C28F89B} = {75A3DFC9-0218-4C39-8E0C-4D8A8FF98EFD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4B3ECA2-D9D4-486F-B3E2-40B614E3DBBB}
