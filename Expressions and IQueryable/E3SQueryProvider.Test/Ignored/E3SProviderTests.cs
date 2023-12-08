@@ -85,7 +85,7 @@ namespace Expressions.Task3.E3SQueryProvider.Test.Ignored
         {
             // set up initial data, update connection string with your local SQL Server name
             new ProductDataSeeder(ConnectionString, MasterConnectionString).SeedData();
-            var productSet = new CustomEntitySet<Product>(new SqlDataSource(ConnectionString));
+            var productSet = new CustomEntitySet<Product>(new ProductDataSource(ConnectionString));
 
             foreach (var product in productSet.Where(p => p.UnitPrice > 100 && p.ProductType == "Customized Product"))
             {

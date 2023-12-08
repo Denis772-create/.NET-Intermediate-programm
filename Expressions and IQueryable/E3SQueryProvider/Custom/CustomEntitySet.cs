@@ -12,7 +12,7 @@ public class CustomEntitySet<T> : IQueryable<T>
     protected readonly Expression Expr;
     protected readonly IQueryProvider QueryProvider;
 
-    public CustomEntitySet(SqlDataSource dataSource)
+    public CustomEntitySet(ProductDataSource dataSource)
     {
         if (dataSource == null)
         {

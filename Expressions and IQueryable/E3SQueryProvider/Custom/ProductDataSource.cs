@@ -5,10 +5,10 @@ using System.Data.SqlClient;
 
 namespace Expressions.Task3.E3SQueryProvider.Custom;
 
-public class SqlDataSource
+public class ProductDataSource
 {
     private readonly string _connectionString;
-    public SqlDataSource(string connectionString)
+    public ProductDataSource(string connectionString)
     {
         _connectionString = connectionString;
     }

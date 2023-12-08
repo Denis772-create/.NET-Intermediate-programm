@@ -6,9 +6,9 @@ namespace Expressions.Task3.E3SQueryProvider.Custom;
 
 public class CustomLinqProvider : IQueryProvider
 {
-    private readonly SqlDataSource _dataSource;
+    private readonly ProductDataSource _dataSource;
 
-    public CustomLinqProvider(SqlDataSource dataSource)
+    public CustomLinqProvider(ProductDataSource dataSource)
     {
         _dataSource = dataSource;
     }
