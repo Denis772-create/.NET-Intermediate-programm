@@ -1,0 +1,7 @@
+﻿namespace CatalogService.Entities;
+
+public class CatalogCategory
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
