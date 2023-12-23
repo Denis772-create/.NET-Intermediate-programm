@@ -1,3 +1,5 @@
+using CatalogService.Application.Mappers;
+using CatalogService.Application.Services;
 using CatalogService.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -5,7 +7,15 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.ReturnHttpNotAcceptable = true;
+    options.CacheProfiles.Add("Default10", new CacheProfile() { Duration = 10 }); // 10 second cache
+});
+
+builder.Services.AddResponseCaching();
+builder.Services.AddAutoMapper(typeof(CatalogItemProfile).Assembly);
+builder.Services.AddScoped<ICatalogService, CatalogService.Application.Services.CatalogService>();
 
 // Add Swagger services
 builder.Services.AddSwaggerGen();
@@ -41,18 +51,14 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 
 var app = builder.Build();
 
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-}
-
+app.UseExceptionHandler("/errors");
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API V1");
     c.RoutePrefix = string.Empty;
 });
-
+app.UseResponseCaching();
 app.MapControllers();
 
 using (var scope = app.Services.CreateScope())
@@ -62,5 +68,4 @@ using (var scope = app.Services.CreateScope())
 
     await new CatalogDbContextSeed().SeedAsync(context);
 }
-
 await app.RunAsync();
