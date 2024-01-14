@@ -61,7 +61,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter.Task", "GOF\Adapter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite.Tasks", "GOF\Composite.Tasks\Composite.Tasks.csproj", "{38541E0A-0E3D-4CB7-911E-DAE3C87E61FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facade. Task", "GOF\Facade. Task\Facade. Task.csproj", "{06BF31F0-8EAD-4927-B645-DD56D86FF24A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade. Task", "GOF\Facade. Task\Facade. Task.csproj", "{06BF31F0-8EAD-4927-B645-DD56D86FF24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagingState", "GOF\ManagingState\ManagingState.csproj", "{17113C08-AB9C-4D5C-9D3C-3820FC460D27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +163,10 @@ Global
 		{06BF31F0-8EAD-4927-B645-DD56D86FF24A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BF31F0-8EAD-4927-B645-DD56D86FF24A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BF31F0-8EAD-4927-B645-DD56D86FF24A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -189,6 +195,7 @@ Global
 		{570BC695-A2A1-4579-AC03-E6EE4EF0CAD3} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
 		{38541E0A-0E3D-4CB7-911E-DAE3C87E61FE} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
 		{06BF31F0-8EAD-4927-B645-DD56D86FF24A} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
+		{17113C08-AB9C-4D5C-9D3C-3820FC460D27} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4B3ECA2-D9D4-486F-B3E2-40B614E3DBBB}
