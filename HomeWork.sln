@@ -63,7 +63,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite.Tasks", "GOF\Comp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade. Task", "GOF\Facade. Task\Facade. Task.csproj", "{06BF31F0-8EAD-4927-B645-DD56D86FF24A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManagingState", "GOF\ManagingState\ManagingState.csproj", "{17113C08-AB9C-4D5C-9D3C-3820FC460D27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagingState", "GOF\ManagingState\ManagingState.csproj", "{17113C08-AB9C-4D5C-9D3C-3820FC460D27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlteringBehavior", "GOF\AlteringBehavior\AlteringBehavior.csproj", "{9BFA12D3-9AB1-49E2-AD81-AA7F62CDD7A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -167,6 +169,10 @@ Global
 		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17113C08-AB9C-4D5C-9D3C-3820FC460D27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BFA12D3-9AB1-49E2-AD81-AA7F62CDD7A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BFA12D3-9AB1-49E2-AD81-AA7F62CDD7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BFA12D3-9AB1-49E2-AD81-AA7F62CDD7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BFA12D3-9AB1-49E2-AD81-AA7F62CDD7A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -196,6 +202,7 @@ Global
 		{38541E0A-0E3D-4CB7-911E-DAE3C87E61FE} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
 		{06BF31F0-8EAD-4927-B645-DD56D86FF24A} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
 		{17113C08-AB9C-4D5C-9D3C-3820FC460D27} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
+		{9BFA12D3-9AB1-49E2-AD81-AA7F62CDD7A0} = {0221FB08-621D-4703-9928-A2BE7BC6086E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4B3ECA2-D9D4-486F-B3E2-40B614E3DBBB}
