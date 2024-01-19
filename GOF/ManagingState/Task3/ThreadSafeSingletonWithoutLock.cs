@@ -2,7 +2,7 @@
 
 public sealed class ThreadSafeSingletonWithoutLock
 {
-    public static ThreadSafeSingletonWithoutLock? Instance { get; }
+    public static ThreadSafeSingletonWithoutLock Instance => new();
 
     static ThreadSafeSingletonWithoutLock() { }
     private ThreadSafeSingletonWithoutLock() { }
